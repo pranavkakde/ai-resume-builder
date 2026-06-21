@@ -1,0 +1,183 @@
+.resume-uploader {
+  padding: 24px;
+  animation: slideUp 0.4s ease;
+}
+
+.resume-uploader__title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: var(--text-primary);
+}
+
+.resume-uploader__subtitle {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.resume-uploader__dropzone {
+  border: 2px dashed var(--border-color);
+  border-radius: var(--border-radius-lg);
+  padding: 48px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  background: transparent;
+  min-height: 200px;
+  position: relative;
+}
+
+.resume-uploader__dropzone:hover,
+.resume-uploader__dropzone--active {
+  border-color: var(--accent-primary);
+  background: rgba(108, 99, 255, 0.04);
+}
+
+.resume-uploader__dropzone--active {
+  border-style: solid;
+  box-shadow: inset 0 0 32px rgba(108, 99, 255, 0.06);
+}
+
+.resume-uploader__dropzone-icon {
+  font-size: 2.8rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+.resume-uploader__dropzone-text {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.resume-uploader__dropzone-text strong {
+  color: var(--accent-primary);
+}
+
+.resume-uploader__dropzone-hint {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.resume-uploader__dropzone input[type="file"] {
+  display: none;
+}
+
+.resume-uploader__file-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px;
+  background: var(--bg-card);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  animation: scaleIn 0.3s ease;
+}
+
+.resume-uploader__file-icon {
+  font-size: 2rem;
+}
+
+.resume-uploader__file-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.resume-uploader__file-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.resume-uploader__file-meta {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.resume-uploader__file-remove {
+  color: var(--text-muted);
+  font-size: 1.2rem;
+  padding: 4px;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.resume-uploader__file-remove:hover {
+  color: var(--danger);
+  background: rgba(239, 68, 68, 0.1);
+}
+
+.resume-uploader__loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 48px;
+}
+
+.resume-uploader__loading-text {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+}
+
+.resume-uploader__error {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: var(--border-radius);
+  font-size: 0.85rem;
+  color: var(--danger);
+  margin-top: 12px;
+}
+
+.resume-uploader__text-preview {
+  margin-top: 16px;
+}
+
+.resume-uploader__text-preview-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.resume-uploader__text-preview-label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.resume-uploader__text-area {
+  width: 100%;
+  min-height: 200px;
+  padding: 14px;
+  background: var(--bg-card);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  font-size: 0.85rem;
+  line-height: 1.65;
+  resize: vertical;
+  transition: border-color var(--transition-fast);
+}
+
+.resume-uploader__text-area:focus {
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.1);
+}

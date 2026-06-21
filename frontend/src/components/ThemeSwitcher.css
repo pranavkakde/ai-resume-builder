@@ -1,0 +1,41 @@
+.theme-switcher {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.theme-switcher__dot {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  position: relative;
+}
+
+.theme-switcher__dot:hover {
+  transform: scale(1.15);
+}
+
+.theme-switcher__dot--active {
+  border-color: var(--text-primary);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
+  transform: scale(1.15);
+}
+
+.theme-switcher__dot--midnight {
+  background: linear-gradient(135deg, #6c63ff, #00d2ff);
+}
+
+.theme-switcher__dot--aurora {
+  background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+}
+
+.theme-switcher__dot--ivory {
+  background: linear-gradient(135deg, #f8f7f4, #6c5ce7);
+}
+
+.theme-switcher__dot--ocean {
+  background: linear-gradient(135deg, #00b4d8, #0077b6);
+}

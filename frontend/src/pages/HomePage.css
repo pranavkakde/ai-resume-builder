@@ -1,0 +1,130 @@
+.home-page {
+  padding-bottom: 80px;
+}
+
+/* ── Hero ──────────────────────────────────────────────────── */
+.home-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 80px 24px 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.home-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 60% 50% at 50% 0%,
+    rgba(108, 99, 255, 0.08) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.home-hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 16px;
+  background: rgba(108, 99, 255, 0.08);
+  border: 1px solid rgba(108, 99, 255, 0.15);
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--accent-primary);
+  margin-bottom: 24px;
+  animation: fadeIn 0.5s ease;
+}
+
+.home-hero__headline {
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin-bottom: 20px;
+  max-width: 700px;
+  animation: slideUp 0.6s ease;
+}
+
+.home-hero__subtitle {
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  color: var(--text-secondary);
+  max-width: 560px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  animation: slideUp 0.6s ease 0.1s both;
+}
+
+.home-hero__ctas {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  animation: slideUp 0.6s ease 0.2s both;
+}
+
+.home-hero__cta {
+  text-decoration: none;
+}
+
+/* ── Feature Cards ─────────────────────────────────────────── */
+.home-features {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.home-features__title {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+  animation: fadeIn 0.4s ease;
+}
+
+.home-features__subtitle {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 40px;
+}
+
+.home-features__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.home-feature-card {
+  padding: 28px 24px;
+  text-align: center;
+  transition: transform var(--transition-base);
+  animation: slideUp 0.5s ease both;
+}
+
+.home-feature-card:hover {
+  transform: translateY(-4px);
+}
+
+.home-feature-card__icon {
+  font-size: 2.4rem;
+  margin-bottom: 14px;
+  display: block;
+}
+
+.home-feature-card__title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+}
+
+.home-feature-card__desc {
+  font-size: 0.84rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+}

@@ -1,0 +1,203 @@
+.tracker-page {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.tracker-page__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.tracker-page__title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.tracker-page__count {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+/* ── Filters ───────────────────────────────────────────────── */
+.tracker-filters {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.tracker-filters__search {
+  flex: 1;
+  min-width: 200px;
+  padding: 10px 16px;
+  background: var(--bg-card);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  font-size: 0.9rem;
+  transition: border-color var(--transition-fast);
+}
+
+.tracker-filters__search:focus {
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.1);
+}
+
+.tracker-filters__search::placeholder {
+  color: var(--text-muted);
+}
+
+.tracker-filters__status {
+  padding: 10px 36px 10px 14px;
+  background: var(--bg-card);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  font-size: 0.9rem;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%236b6880' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10l-5 5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+}
+
+/* ── Grid ──────────────────────────────────────────────────── */
+.tracker-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 16px;
+}
+
+/* ── Empty ─────────────────────────────────────────────────── */
+.tracker-empty {
+  text-align: center;
+  padding: 80px 24px;
+  animation: fadeIn 0.4s ease;
+}
+
+.tracker-empty__icon {
+  font-size: 3rem;
+  margin-bottom: 16px;
+}
+
+.tracker-empty__text {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+.tracker-empty__subtext {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+/* ── Modal ─────────────────────────────────────────────────── */
+.tracker-modal {
+  background: var(--glass-bg);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--border-radius-xl);
+  padding: 32px;
+  width: 90%;
+  max-width: 520px;
+  box-shadow: var(--shadow-lg);
+  animation: scaleIn 0.25s ease;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.tracker-modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.tracker-modal__title {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.tracker-modal__close {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  font-size: 1.2rem;
+  transition: all var(--transition-fast);
+  background: transparent;
+}
+
+.tracker-modal__close:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text-primary);
+}
+
+.tracker-modal__form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tracker-modal__actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+
+/* ── Delete confirm ────────────────────────────────────────── */
+.tracker-delete-modal {
+  background: var(--glass-bg);
+  backdrop-filter: blur(24px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--border-radius-xl);
+  padding: 32px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: var(--shadow-lg);
+  animation: scaleIn 0.2s ease;
+  text-align: center;
+}
+
+.tracker-delete-modal__icon {
+  font-size: 2.4rem;
+  margin-bottom: 12px;
+}
+
+.tracker-delete-modal__text {
+  font-size: 1rem;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.tracker-delete-modal__subtext {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+.tracker-delete-modal__actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+/* ── Loading ───────────────────────────────────────────────── */
+.tracker-loading {
+  display: flex;
+  justify-content: center;
+  padding: 60px;
+}

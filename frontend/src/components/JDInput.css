@@ -1,0 +1,71 @@
+.jd-input {
+  padding: 24px;
+  animation: slideUp 0.4s ease 0.1s both;
+}
+
+.jd-input__title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: var(--text-primary);
+}
+
+.jd-input__subtitle {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.jd-input__wrapper {
+  position: relative;
+}
+
+.jd-input__textarea {
+  width: 100%;
+  min-height: 300px;
+  padding: 16px;
+  background: var(--bg-card);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  font-size: 0.9rem;
+  line-height: 1.65;
+  resize: vertical;
+  transition: border-color var(--transition-fast),
+              box-shadow var(--transition-fast);
+}
+
+.jd-input__textarea:focus {
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.1);
+}
+
+.jd-input__textarea::placeholder {
+  color: var(--text-muted);
+}
+
+.jd-input__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.jd-input__char-count {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+.jd-input__clear-btn {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  padding: 4px 12px;
+  border-radius: var(--border-radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.jd-input__clear-btn:hover {
+  color: var(--danger);
+  background: rgba(239, 68, 68, 0.08);
+}

@@ -1,0 +1,212 @@
+.rec-card {
+  padding: 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  transition: all var(--transition-base);
+  animation: slideUp 0.4s ease both;
+}
+
+.rec-card:hover {
+  box-shadow: var(--shadow-sm);
+}
+
+.rec-card--accepted {
+  border-color: rgba(34, 197, 94, 0.3);
+  box-shadow: 0 0 12px rgba(34, 197, 94, 0.08);
+}
+
+.rec-card--rejected {
+  opacity: 0.45;
+}
+
+.rec-card--editing {
+  border-color: rgba(59, 130, 246, 0.3);
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.08);
+}
+
+.rec-card__header {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.rec-card__priority {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 5px;
+}
+
+.rec-card__priority--high   { background: #ef4444; }
+.rec-card__priority--medium { background: #f59e0b; }
+.rec-card__priority--low    { background: #6b7280; }
+
+.rec-card__title {
+  flex: 1;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  min-width: 0;
+}
+
+.rec-card__category {
+  flex-shrink: 0;
+}
+
+.rec-card__reasoning-toggle {
+  font-size: 0.78rem;
+  color: var(--accent-primary);
+  padding: 0;
+  margin-bottom: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: transparent;
+}
+
+.rec-card__reasoning-toggle:hover {
+  text-decoration: underline;
+}
+
+.rec-card__reasoning {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin-bottom: 14px;
+  padding: 10px 14px;
+  background: rgba(108, 99, 255, 0.04);
+  border-radius: var(--border-radius-sm);
+  border-left: 3px solid var(--accent-primary);
+  animation: fadeIn 0.2s ease;
+}
+
+.rec-card__diff {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.rec-card__diff-single {
+  margin-bottom: 14px;
+}
+
+.rec-card__diff-col {
+  padding: 12px;
+  border-radius: var(--border-radius-sm);
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+
+.rec-card__diff-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 6px;
+}
+
+.rec-card__diff-original {
+  background: rgba(239, 68, 68, 0.05);
+  border: 1px solid rgba(239, 68, 68, 0.12);
+  color: var(--text-secondary);
+}
+
+.rec-card__diff-original .rec-card__diff-label {
+  color: #f87171;
+}
+
+.rec-card__diff-suggested {
+  background: rgba(34, 197, 94, 0.05);
+  border: 1px solid rgba(34, 197, 94, 0.12);
+  color: var(--text-primary);
+}
+
+.rec-card__diff-suggested .rec-card__diff-label {
+  color: #4ade80;
+}
+
+.rec-card__edit-area {
+  width: 100%;
+  min-height: 80px;
+  padding: 12px;
+  background: var(--bg-card-hover);
+  color: var(--text-primary);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  border-radius: var(--border-radius-sm);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  resize: vertical;
+  margin-bottom: 14px;
+}
+
+.rec-card__edit-area:focus {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.rec-card__actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.rec-card__action-btn {
+  padding: 6px 14px;
+  border-radius: var(--border-radius-sm);
+  font-size: 0.78rem;
+  font-weight: 600;
+  transition: all var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.rec-card__action-btn--accept {
+  background: rgba(34, 197, 94, 0.1);
+  color: #4ade80;
+  border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+.rec-card__action-btn--accept:hover {
+  background: rgba(34, 197, 94, 0.2);
+}
+
+.rec-card__action-btn--reject {
+  background: rgba(239, 68, 68, 0.08);
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.15);
+}
+
+.rec-card__action-btn--reject:hover {
+  background: rgba(239, 68, 68, 0.15);
+}
+
+.rec-card__action-btn--edit {
+  background: rgba(59, 130, 246, 0.08);
+  color: #60a5fa;
+  border: 1px solid rgba(59, 130, 246, 0.15);
+}
+
+.rec-card__action-btn--edit:hover {
+  background: rgba(59, 130, 246, 0.15);
+}
+
+.rec-card__action-btn--reset {
+  background: rgba(107, 104, 128, 0.08);
+  color: var(--text-muted);
+  border: 1px solid rgba(107, 104, 128, 0.15);
+}
+
+.rec-card__action-btn--reset:hover {
+  background: rgba(107, 104, 128, 0.15);
+}
+
+@media (max-width: 640px) {
+  .rec-card__diff {
+    grid-template-columns: 1fr;
+  }
+}

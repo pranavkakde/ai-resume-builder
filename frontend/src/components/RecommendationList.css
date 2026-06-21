@@ -1,0 +1,79 @@
+.rec-list {
+  animation: fadeIn 0.4s ease;
+}
+
+.rec-list__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.rec-list__title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.rec-list__count {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.rec-list__bulk-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.rec-list__filters {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.rec-list__filter-btn {
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  transition: all var(--transition-fast);
+}
+
+.rec-list__filter-btn:hover {
+  color: var(--text-primary);
+  border-color: var(--accent-primary);
+}
+
+.rec-list__filter-btn--active {
+  background: var(--accent-primary);
+  color: #fff;
+  border-color: var(--accent-primary);
+}
+
+.rec-list__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.rec-list__empty {
+  text-align: center;
+  padding: 48px 24px;
+  color: var(--text-muted);
+}
+
+.rec-list__empty-icon {
+  font-size: 2.4rem;
+  margin-bottom: 12px;
+}
+
+.rec-list__empty-text {
+  font-size: 0.95rem;
+}

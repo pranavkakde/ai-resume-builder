@@ -1,0 +1,134 @@
+.analyzer-page {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ── Step 1: Input ─────────────────────────────────────────── */
+.analyzer-input {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  animation: fadeIn 0.4s ease;
+}
+
+.analyzer-input__action-row {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 20px 0;
+}
+
+.analyzer-input__warning {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: rgba(245, 158, 11, 0.08);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+  border-radius: var(--border-radius);
+  font-size: 0.82rem;
+  color: var(--warning);
+  grid-column: 1 / -1;
+}
+
+.analyzer-input__warning button {
+  color: var(--accent-primary);
+  font-weight: 600;
+  text-decoration: underline;
+  background: transparent;
+  font-size: inherit;
+}
+
+/* ── Step 2: Results ───────────────────────────────────────── */
+.analyzer-results {
+  animation: fadeIn 0.4s ease;
+}
+
+.analyzer-results__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border-color);
+}
+
+/* ── Step 3: Generate ──────────────────────────────────────── */
+.analyzer-generate {
+  animation: fadeIn 0.4s ease;
+}
+
+.analyzer-generate__back {
+  margin-bottom: 24px;
+}
+
+/* ── Loading ───────────────────────────────────────────────── */
+.analyzer-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 24px;
+  gap: 20px;
+  animation: fadeIn 0.3s ease;
+}
+
+.analyzer-loading__text {
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+
+.analyzer-loading__subtext {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+/* ── Error ─────────────────────────────────────────────────── */
+.analyzer-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 60px 24px;
+  text-align: center;
+}
+
+.analyzer-error__icon {
+  font-size: 2.4rem;
+}
+
+.analyzer-error__message {
+  font-size: 0.95rem;
+  color: var(--danger);
+  max-width: 500px;
+}
+
+/* ── Skeleton ──────────────────────────────────────────────── */
+.analyzer-skeleton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 40px 0;
+}
+
+.analyzer-skeleton__circle {
+  width: 200px;
+  height: 200px;
+}
+
+.analyzer-skeleton__bars {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .analyzer-input {
+    grid-template-columns: 1fr;
+  }
+}

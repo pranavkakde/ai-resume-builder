@@ -1,6 +1,6 @@
-# ResumeAI — AI-Powered Resume Builder
+# AI Resume Builder
 
-ResumeAI is an intelligent, full-stack application designed to analyze, optimize, and generate resumes using AI. By comparing your resume to any job description, it provides intelligent scoring and tailored recommendations to help you land your dream job.
+AI Resume Builder is an intelligent, full-stack application designed to analyze, optimize, and generate resumes using AI. By comparing your resume to any job description, it provides intelligent scoring and tailored recommendations to help you land your dream job.
 
 ## Features
 
